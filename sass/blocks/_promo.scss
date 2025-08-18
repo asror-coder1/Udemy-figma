@@ -1,0 +1,165 @@
+.promo {
+  background: #0f0f15;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  gap: 40px;
+
+  &__content {
+    max-width: 600px;
+    flex: 1;
+    margin-top: 40px; // yuqoridan joy tashlash
+    margin-left: 20px; // chapdan joy tashlash
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: #ccc;
+    line-height: 1.6;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+
+    .promo__btn {
+      background: #6c63ff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: #574fdb;
+      }
+    }
+
+    .promo__current {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .promo__old {
+      font-size: 1.1rem;
+      color: #999;
+      text-decoration: line-through;
+    }
+  }
+
+  &__guarantee {
+    font-size: 0.8rem;
+    color: #aaa;
+  }
+
+  &__box {
+    background: #fff;
+    color: #000;
+    border-radius: 12px;
+    padding: 25px 20px;
+    max-width: 300px;
+    flex: 1;
+    margin-top: 40px; // yuqoridan joy tashlash
+    margin-right: 20px; // o‘ngdan joy tashlash
+
+    &-title {
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .promo__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+
+        img {
+          width: 18px;
+          margin-right: 8px;
+        }
+
+        span {
+          font-weight: 700;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+/* 📱 Tablet (<= 992px) */
+@media (max-width: 992px) {
+  .promo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 30px;
+
+    &__content {
+      margin: 20px 0; // chap-o‘ng margin olib tashlanadi
+    }
+
+    &__price {
+      justify-content: center;
+    }
+
+    &__box {
+      max-width: 400px;
+      margin: 20px 0; // o‘ng margin olib tashlanadi
+    }
+  }
+}
+
+/* 📱 Telefon (<= 576px) */
+@media (max-width: 576px) {
+  .promo {
+    padding: 30px 20px;
+    gap: 25px;
+
+    &__title {
+      font-size: 1.6rem;
+    }
+
+    &__text {
+      font-size: 0.95rem;
+    }
+
+    &__price {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &__box {
+      width: 100%;
+      padding: 20px 15px;
+      margin: 15px 0; // yuqoridan-pastdan joy tashlash
+
+      .promo__list li {
+        font-size: 0.9rem;
+
+        img {
+          width: 16px;
+        }
+      }
+    }
+  }
+}

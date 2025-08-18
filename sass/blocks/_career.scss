@@ -1,0 +1,154 @@
+.career {
+  background: #f8f9fb;
+  padding: 40px 20px;
+  max-width: 1440px;
+
+  &__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 30px;
+  }
+
+  &__info {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* icon va matn orasidagi masofa */
+
+    .career__icon {
+      flex-shrink: 0;
+      width: 60px;
+      height: 60px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .career__content {
+      display: flex;
+      flex-direction: column;
+
+      .career__title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: #2a2b3f;
+      }
+
+      .career__text {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 15px;
+        line-height: 1.5;
+      }
+
+      .career__socials {
+        display: flex;
+        gap: 12px;
+
+        a img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+
+  &__action {
+    flex: 1;
+    text-align: right;
+
+    .career__subtitle {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #2a2b3f;
+    }
+
+    .career__price {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+
+      .career__btn {
+        background: #7a3eff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s;
+
+        &:hover {
+          background: #602de8;
+        }
+      }
+
+      .career__cost {
+        font-size: 18px;
+        font-weight: 700;
+        color: #333;
+      }
+
+      .career__old {
+        font-size: 14px;
+        color: #888;
+        text-decoration: line-through;
+      }
+    }
+
+    .career__learners {
+      font-size: 13px;
+      color: #666;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 6px;
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__note {
+    max-width: 1200px;
+    margin: 15px auto 0;
+    font-size: 12px;
+    color: #777;
+    line-height: 1.6;
+  }
+
+  /* 📱 Responsive */
+  @media (max-width: 992px) {
+    &__wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__info {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__action {
+      text-align: center;
+
+      .career__learners {
+        justify-content: center;
+      }
+    }
+  }
+}

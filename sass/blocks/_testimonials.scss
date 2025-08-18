@@ -1,0 +1,164 @@
+// ========= Variables =========
+$bg-dark: #2A2B3F;
+$card-bg: #ffffff;
+$text-dark: #1e2330;
+$text-muted: #60697b;
+$accent: #9aa6ff;
+$link: #7b68ee;
+$radius: 14px;
+$shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+
+// ========= Mixins =========
+$container-max: 1200px;
+
+@mixin container {
+  max-width: $container-max;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 28px);
+}
+
+@mixin clamp-text($min, $vw, $max) {
+  font-size: clamp($min, $vw, $max);
+}
+
+// Breakpoints
+$bp-lg: 1200px;
+$bp-md: 992px;
+$bp-sm: 768px;
+$bp-xs: 520px;
+
+// ========= Section =========
+.testimonials {
+  background: $bg-dark;
+  padding: clamp(48px, 8vw, 80px) 0;
+
+  &__container {
+    @include container;
+  }
+
+  &__title {
+    color: #fff;
+    text-align: center;
+    @include clamp-text(22px, 3.8vw, 34px);
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 0 0 clamp(28px, 5vw, 44px);
+    letter-spacing: 0.2px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(16px, 3vw, 24px);
+
+    @media (max-width: $bp-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $bp-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// ========= Card =========
+.tcard {
+  background: $card-bg;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: clamp(18px, 2.4vw, 24px);
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+  position: relative;
+
+  &__quoteicon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    .tcard__quoteicon-svg {
+      width: 100%;
+      height: 100%;
+      fill: $accent;
+      opacity: 0.8;
+    }
+  }
+
+  &__text {
+    color: $text-dark;
+    line-height: 1.6;
+    margin: 0 0 18px;
+    @include clamp-text(14px, 2.2vw, 16px);
+  }
+
+  &__footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &--logo {
+      align-items: center;
+    }
+  }
+
+  &__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex: 0 0 44px;
+  }
+
+  &__meta {
+    display: grid;
+    gap: 4px;
+  }
+
+  &__name {
+    color: $text-dark;
+    font-weight: 700;
+    @include clamp-text(14px, 2vw, 16px);
+
+    &--muted {
+      color: $text-muted;
+      font-weight: 500;
+    }
+  }
+
+  &__role {
+    color: $text-muted;
+    @include clamp-text(12px, 1.8vw, 14px);
+  }
+
+  &__link {
+    color: $link;
+    text-decoration: none;
+    border-bottom: 1px solid rgba($link, 0.3);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__logo {
+    width: 120px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $text-muted;
+    }
+  }
+}
+
+// ====== Very small screens ======
+@media (max-width: $bp-xs) {
+  .tcard {
+    padding: 16px;
+    &__avatar {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
