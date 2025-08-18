@@ -1,0 +1,110 @@
+.course {
+  padding: 50px;
+}
+
+.course__wrapper {
+  @include flex(center, 20px);
+  align-items: flex-start;
+}
+.course__info {
+  max-width: 424px;
+}
+.course__subtitle {
+  @include font(16px, #3b1b94, 22px bold);
+}
+.course__title {
+  @include font(24px, #2a2b3f, 28px, bold);
+  margin: 8px 0 24px;
+}
+.course__card {
+  border: 2px solid #b5b7c6;
+  border-radius: 8px;
+  padding: 17px;
+}
+.course__img {
+}
+.course__cart-title {
+  @include font(18px, #2a2b3f, 22px, bold);
+  margin: 15px 0 4px;
+}
+.course__text {
+  @include font(16px, #2a2b3f, 22px, 400);
+}
+.course__instructor {
+  @include font(17px, #595c73, 22px, 400);
+  margin: 4px 0 15px;
+}
+.course__hashtags {
+  @include flex(flex-start, 4px);
+  flex-wrap: wrap;
+  margin-bottom: 17px;
+
+  span {
+    border: 1px solid #b5b7c6;
+    border-radius: 8px;
+    padding: 4px;
+  }
+}
+.course__price {
+  @include font(16px, #2a2b3f, 16px, bold);
+  span {
+    text-decoration: line-through;
+    @include font(14px, #595c73, 14px, 400);
+  }
+}
+
+.course__content {
+  width: 585px;
+  border: 2px solid #b5b7c6;
+  border-radius: 8px;
+}
+.course__header {
+  @include flex(space-between, 0);
+  padding: 24px;
+}
+.course__link {
+  @include font(14px, #6d28d2, 16px, bold);
+  z-index: 2;
+}
+.course__content-box {
+  padding: 9px 24px 24px;
+  border-top: 1px solid #b5b7c6;
+  border-bottom: 1px solid #b5b7c6;
+}
+.course__content-head {
+  @include flex(flex-start, 20px);
+  span {
+    @include font(22px, #3b1b94, 28px, bold);
+  }
+  p {
+    @include font(18px, #2a2b3f, 22px, bold);
+  }
+  img {
+    margin-left: auto;
+  }
+}
+
+.course__sections {
+  @include flex(flex-start, 10px);
+  padding-left: 48px;
+  margin-bottom: 3px;
+  @include font(16px, #2a2b3f, 22px, 400);
+}
+
+@media only screen and (max-width: 900px){
+  .course__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .course__info {
+    width: 100%;
+    max-width: 100%;
+    img{
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  .course__content {
+    width: 100%;
+  }
+}

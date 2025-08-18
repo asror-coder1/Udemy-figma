@@ -5,16 +5,11 @@
   gap: $gap;
 }
 
-// @mixin font($size: 16px, $line: 100%, weight: 400) {
-//   font-size: $size;
-//   font-weight: $weight;
-//   line-height: $line
-// }
 
-@mixin font($size: 16px, $line: 1.5, $weight: 400, $family: inherit) {
+@mixin font($size: 16px, $color: $text-color, $line:100%, $weight: 400) {
     font-size: $size;
-    line-height: $line;   // tavsiya: 1.4–1.6 kabi unitless
     font-weight: $weight;
-    font-family: $family;
+    line-height: $line;   
+    color: $color;
   }
   

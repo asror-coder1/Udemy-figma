@@ -1,0 +1,108 @@
+// .promo {
+//     background: #0f0f15;
+//     color: #fff;
+//     display: flex;
+//     justify-content: space-between;
+//     flex-wrap: wrap;
+//     padding: 60px 40px; // tepa-past va ikki chekkadan joy qoldirish
+  
+//     &__content {
+//       max-width: 600px;
+//     }
+  
+//     &__title {
+//       font-size: 2rem;
+//       font-weight: 700;
+//       margin-bottom: 15px;
+//     }
+  
+//     &__text {
+//       font-size: 1rem;
+//       margin-bottom: 25px;
+//       color: #ccc;
+//     }
+  
+//     &__price {
+//       display: flex;
+//       align-items: center;
+//       gap: 15px;
+//       margin-bottom: 10px;
+  
+//       .promo__btn {
+//         background: #6c63ff;
+//         border: none;
+//         padding: 10px 18px;
+//         border-radius: 6px;
+//         color: #fff;
+//         font-weight: 600;
+//         cursor: pointer;
+//         transition: 0.3s;
+  
+//         &:hover {
+//           background: #574fdb;
+//         }
+//       }
+  
+//       .promo__current {
+//         font-size: 1.3rem;
+//         font-weight: 700;
+//       }
+  
+//       .promo__old {
+//         font-size: 1.1rem;
+//         color: #999;
+//         text-decoration: line-through;
+//       }
+//     }
+  
+//     &__guarantee {
+//       font-size: 0.8rem;
+//       color: #aaa;
+//     }
+  
+//     &__box {
+//       background: #fff;
+//       color: #000;
+//       border-radius: 12px;
+//       padding: 25px 20px;
+//       max-width: 300px;
+  
+//       &-title {
+//         font-weight: 700;
+//         margin-bottom: 15px;
+//       }
+  
+//       .promo__list {
+//         list-style: none;
+//         padding: 0;
+//         margin: 0;
+  
+//         li {
+//           display: flex;
+//           align-items: center;
+//           font-size: 0.95rem;
+//           margin-bottom: 12px;
+  
+//           img {
+//             width: 18px;
+//             margin-right: 8px;
+//           }
+  
+//           span {
+//             font-weight: 700;
+//             margin-right: 5px;
+//           }
+//         }
+//       }
+//     }
+//   }
+  
+//   /* Responsive */
+//   @media (max-width: 768px) {
+//     .promo {
+//       flex-direction: column;
+//       gap: 30px;
+//       padding: 40px 20px; // mobil ekranda yanada ixcham
+//     }
+//   }
+  
