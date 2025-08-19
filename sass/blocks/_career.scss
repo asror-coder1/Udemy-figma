@@ -1,7 +1,6 @@
 .career {
   background: #f8f9fb;
   padding: 40px 20px;
-  max-width: 1440px;
 
   &__wrapper {
     max-width: 1200px;
@@ -20,7 +19,7 @@
     flex: 1;
     display: flex;
     align-items: flex-start;
-    gap: 20px; /* icon va matn orasidagi masofa */
+    gap: 20px; 
 
     .career__icon {
       flex-shrink: 0;

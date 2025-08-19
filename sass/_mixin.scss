@@ -5,11 +5,34 @@
   gap: $gap;
 }
 
+@mixin font($size: 16px, $color: $text-color, $line: 100%, $weight: 400) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line;
+  color: $color;
+}
 
-@mixin font($size: 16px, $color: $text-color, $line:100%, $weight: 400) {
-    font-size: $size;
-    font-weight: $weight;
-    line-height: $line;   
-    color: $color;
+// === Mixins ===
+
+@mixin hide-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none; 
   }
-  
+}
+
+// === Global qo‘llash ===
+
+// Agar faqat sahifa scrollini o‘chirishing kerak bo‘lsa:
+body {
+  overflow: auto; // yoki overflow-x/y kerak bo‘lsa shuni yoz
+  @include hide-scrollbar;
+}
+
+// Agar barcha sectionlarga scroll o‘chirish kerak bo‘lsa:
+section {
+  overflow: auto;
+  @include hide-scrollbar;
+}
