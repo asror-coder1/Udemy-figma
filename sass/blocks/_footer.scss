@@ -111,20 +111,34 @@
 }
 
 /* Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .footer__top,
   .footer__companies {
     flex-direction: column;
     gap: 10px;
     text-align: center;
+    align-items: center; 
   }
 
   .footer__companies .footer__logos {
     justify-content: center;
   }
 
+  .footer__links,
+  .footer__bottom {
+    text-align: center; 
+  }
+
+  .footer__links ul,
+  .footer__bottom ul {
+    align-items: center; 
+  }
+
   .footer__copyright {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 }
+

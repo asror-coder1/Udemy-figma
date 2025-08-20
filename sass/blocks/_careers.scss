@@ -61,7 +61,7 @@ p {
     padding: 0;
     margin: 20px 0;
     border-bottom: 1px solid #ccc;
-    flex-wrap: wrap; // ✅ kichik ekranlarda satrga tushadi
+    flex-wrap: wrap; 
 
     li {
       cursor: pointer;
@@ -113,8 +113,7 @@ p {
   }
 }
 
-// ✅ RESPONSIVE VARIANTLAR
-// Laptop / kichik monitor
+//  RESPONSIVE VARIANTLAR
 @media (max-width: 1200px) {
   .careers__cards,
   .courses__carousel {
