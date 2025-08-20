@@ -1,0 +1,130 @@
+.footer {
+  background: #1D1E27;
+  color: #fff;
+  font-size: 14px;
+  padding: 40px 20px;
+
+  a {
+    color: #FFFFFF;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &__top,
+  &__companies {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+  }
+
+  &__btn {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background: #fff;
+      color: #000;
+    }
+  }
+
+  &__companies {
+    flex-wrap: wrap;
+
+    .footer__logos {
+      display: flex;
+      gap: 20px;
+      img {
+        max-height: 25px;
+      }
+    }
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+
+    h4 {
+      color: #fff;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    padding: 30px 0;
+    border-top: 1px solid #333;
+
+    h4 {
+      margin-bottom: 12px;
+      font-size: 15px;
+      color: #fff;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+  }
+
+  &__copyright {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    .footer__logo {
+      max-height: 25px;
+    }
+
+    .footer__settings {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer__lang {
+      color: #FFFFFF;
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer__top,
+  .footer__companies {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer__companies .footer__logos {
+    justify-content: center;
+  }
+
+  .footer__copyright {
+    flex-direction: column;
+    text-align: center;
+  }
+}

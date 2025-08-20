@@ -1,12 +1,12 @@
 .course {
-  padding: 50px;  
-  width: 100%;                   
-  min-height: 772px;               
-  margin: 48px auto;             
+  padding: 50px;
+  width: 100%;
+  min-height: 772px;
+  margin: 48px auto;
 
-  border-radius: 16px;             
-  background: #fff;             
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15); 
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .course__wrapper {
@@ -96,7 +96,7 @@
   @include font(16px, #2a2b3f, 22px, 400);
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 900px) {
   .course__wrapper {
     flex-direction: column;
     align-items: center;
@@ -104,7 +104,7 @@
   .course__info {
     width: 100%;
     max-width: 100%;
-    img{
+    img {
       max-width: 100%;
       width: 100%;
     }
