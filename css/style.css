@@ -2,8 +2,7 @@
 *,
 *::before,
 *::after {
-  padding: 0;
-  margin: 0;
+  padding: 3px;
   box-sizing: border-box;
 }
 
@@ -165,7 +164,7 @@ section::-webkit-scrollbar {
 .hero__cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 10px;
   margin-bottom: 50px;
 }
 .hero__card {
